@@ -1,0 +1,11 @@
+header {
+    background-color: #CACACA;
+    padding-block: 1em;
+}
+
+header .header-list {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+

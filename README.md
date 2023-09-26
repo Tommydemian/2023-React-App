@@ -1,27 +1,22 @@
-# React + TypeScript + Vite
+# 2023 React App:
+2023 react app it's just a generic name to show essentially my understanding of 3 react fundamental toppics:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. React router v6
+2. React query 
+3. unit testing with vitest and react testing library
+4. redux
 
-Currently, two official plugins are available:
+## React router v6 basics are already covered in this project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## React query:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+$ npm i @tanstack/react-query
+# or
+$ pnpm add @tanstack/react-query
+# or
+$ yarn add @tanstack/react-query 
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+React query usage, at least setup is similar to React Router, basically you create a client, and envolve the whole app, *or the screens/components which you wish to allow access to the client* in something called provider/consumer
+ **it's good to understand this basic common patterns**, because they are somehow the foundation of React procedures, **client and context of usage** is a good short definition for it.  

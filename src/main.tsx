@@ -7,8 +7,12 @@ import Home from './views/Home';
 import Collection from './views/Collection';
 import Favorites from './views/Favorites';
 import Data from './views/Data';
-
+// router
 import { createBrowserRouter, RouterProvider, createRoutesFromElements, Route, Link, Outlet } from 'react-router-dom';
+// useQuery
+import {QueryClientProvider, QueryClient} from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 const Root: React.FC = () => {
   return (
@@ -43,7 +47,9 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router}/>
+    </QueryClientProvider>
   </React.StrictMode>,
 );
 
